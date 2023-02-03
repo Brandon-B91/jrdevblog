@@ -1,17 +1,16 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Post from "../components/Post"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Post from "../components/Post";
 
 const RecentPosts = () => {
-
   return (
     // <Layout pageTitle="Check out our latest posts">
-      // <SEO title="junior developers blog" description="Web and frontend development blog, let's talk all things techno wizardry and mechanical witchcraft"></SEO>
-      <div>
-        <h2 class="text-center mb-3">Check out our latest posts!</h2>
+    // <SEO title="junior developers blog" description="Web and frontend development blog, let's talk all things techno wizardry and mechanical witchcraft"></SEO>
+    <div>
+      <h2 class="text-center mb-3">Check out our latest posts!</h2>
       <StaticQuery
-        query={RecentPost} 
-        render={data => {
+        query={RecentPost}
+        render={(data) => {
           return (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -27,12 +26,12 @@ const RecentPosts = () => {
                 />
               ))}
             </div>
-          )
+          );
         }}
       />
-      </div>
-  )
-}
+    </div>
+  );
+};
 
 const RecentPost = graphql`
   query RecentPost {
@@ -63,6 +62,6 @@ const RecentPost = graphql`
       }
     }
   }
-`
+`;
 
-export default RecentPosts
+export default RecentPosts;
