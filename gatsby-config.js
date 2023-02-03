@@ -7,10 +7,10 @@ module.exports = {
     description: `My journey as a developer`,
     twitterUsername: ``,
     image: ``,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.jrdevsblog.com`,
   },
   plugins: [
-    "gatsby-plugin-google-gtag",
+    // "gatsby-plugin-google-gtag",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {

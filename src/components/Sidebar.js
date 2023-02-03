@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   Button,
   Card,
@@ -6,18 +6,22 @@ import {
   CardBody,
   CardSubtitle,
   CardText,
-} from "reactstrap"
-import { graphql, StaticQuery, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import Email from "./Email"
-import { slugify } from "../util/utilityFunctions"
-import authors from "../util/author"
+} from "reactstrap";
+import { graphql, StaticQuery, Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import Email from "./Email";
+import { slugify } from "../util/utilityFunctions";
+import authors from "../util/author";
 
 const Sidebar = ({ author, authorFluid }) => (
   <div>
     {author && (
       <Card>
-        <GatsbyImage className="card-image-top" image={authorFluid} maxHeight="200" />
+        <GatsbyImage
+          className="card-image-top"
+          image={authorFluid}
+          maxHeight="200"
+        />
         <CardBody>
           <CardTitle className="text-center text-uppercase mb-3 text-md">
             {author.name}
@@ -71,14 +75,16 @@ const Sidebar = ({ author, authorFluid }) => (
         </CardTitle>
         <StaticQuery
           query={sidebarQuery}
-          render={data => (
+          render={(data) => (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Card key={node.id}>
                   <Link to={`/${node.fields.slug}/`}>
                     <GatsbyImage
                       className="card-image-top"
-                      image={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                      image={
+                        node.frontmatter.image.childImageSharp.gatsbyImageData
+                      }
                     />
                   </Link>
                   <CardBody>
@@ -110,7 +116,7 @@ const Sidebar = ({ author, authorFluid }) => (
       </CardBody>
     </Card>
   </div>
-)
+);
 
 const sidebarQuery = graphql`
   query sidebarQuery {
@@ -129,8 +135,7 @@ const sidebarQuery = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(width: 400, 
-                  layout: CONSTRAINED)
+                gatsbyImageData(width: 400, layout: CONSTRAINED)
               }
             }
           }
@@ -142,6 +147,6 @@ const sidebarQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Sidebar
+export default Sidebar;
