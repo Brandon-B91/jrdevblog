@@ -16,10 +16,10 @@ const Header = ({ siteTitle }) => {
   const toggle = () => setIsOpen(!isOpen)
   return (
     <div>
-      <Navbar fixed="top" dark expand="sm" >
+      <Navbar fixed="top" dark expand="xs" >
         <div className="container d-inline-flex">
         <NavbarBrand href="/">{siteTitle}</NavbarBrand>
-          <NavbarToggler onClick={toggle} />
+          <NavbarToggler onClick={toggle} className="ms-auto" />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>

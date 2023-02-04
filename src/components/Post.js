@@ -26,7 +26,7 @@ const Post = ({ title, author, slug, date, body, image, tags }) => {
         <CardTitle>
           <Link
             to={`/${slug}/`}
-            className="text-danger d-flex justify-content-center h3 text-wrap"
+            className="text-light d-flex justify-content-center h3 text-wrap"
           >
             {title}
           </Link>

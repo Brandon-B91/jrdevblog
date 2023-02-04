@@ -6,16 +6,22 @@ module.exports = {
     title: `Jr Devs Blog`,
     description: `My journey as a developer`,
     twitterUsername: ``,
-    image: ``,
+    image: `src/images/code-icon.svg`,
     siteUrl: `https://www.jrdevsblog.com`,
   },
   plugins: [
     // "gatsby-plugin-google-gtag",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
+    
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "Jr Devs Blog",
+        short_name: "JrDevs",
+        start_url: "/",
+        background_color: "#121212",
+        theme_color: "#121212",
         icon: "src/images/code-icon.svg",
       },
     },
