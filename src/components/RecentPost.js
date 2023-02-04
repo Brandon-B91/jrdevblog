@@ -35,10 +35,7 @@ const RecentPosts = () => {
 
 const RecentPost = graphql`
   query RecentPost {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 2
-    ) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 2) {
       totalCount
       edges {
         node {

@@ -43,34 +43,31 @@ const IndexPage = () => {
 }
 
 const indexQuery = graphql`
-  query indexQuery {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 5
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMM Do YYYY")
-            author
-            tags
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 800, layout: CONSTRAINED)
-              }
+query indexQuery {
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 5) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "MMM Do YYYY")
+          author
+          tags
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 800, layout: CONSTRAINED)
             }
           }
-          fields {
-            slug
-          }
-          excerpt(format: PLAIN, pruneLength: 180, truncate: true)
         }
+        fields {
+          slug
+        }
+        excerpt(format: PLAIN, pruneLength: 180, truncate: true)
       }
     }
   }
+}
 `
 
 export default IndexPage

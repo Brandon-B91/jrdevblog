@@ -122,7 +122,7 @@ const sidebarQuery = graphql`
   query sidebarQuery {
     allMarkdownRemark(
       filter: { frontmatter: { tags: { eq: "intro" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       limit: 5
     ) {
       edges {

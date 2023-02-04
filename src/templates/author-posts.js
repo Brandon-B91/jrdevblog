@@ -33,10 +33,10 @@ const authorPosts = ({ data, pageContext }) => {
 };
 
 export const authorQuery = graphql`
-  query ($authorName: String!, $imageUrl: String!) {
+  query($authorName: String!, $imageUrl: String!) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { author: { eq: $authorName } } }
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {author: {eq: $authorName}}}
     ) {
       totalCount
       edges {
@@ -60,7 +60,7 @@ export const authorQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: $imageUrl }) {
+    file(relativePath: {eq: $imageUrl}) {
       childImageSharp {
         gatsbyImageData(width: 500)
       }

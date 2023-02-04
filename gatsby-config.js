@@ -17,12 +17,13 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Jr Devs Blog",
+        name: "Jr Dev Blog",
         short_name: "JrDevs",
         start_url: "/",
         background_color: "#121212",
         theme_color: "#121212",
-        icon: "src/images/code-icon.svg",
+        display: `standalone`,
+        // icon: "src/images/code-icon.svg",
       },
     },
     "gatsby-plugin-offline",

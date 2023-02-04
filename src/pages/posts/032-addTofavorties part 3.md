@@ -2,7 +2,7 @@
 title: "Add to favorties using local storage part 3 Updated!"
 date: 2023-02-03 15:00:00
 author: "Brandon Brown"
-image: '../../images/images-front/Part 2....png'
+image: '../../images/images-front/Part 3....png'
 tags:
    - javascript
    - React

@@ -31,34 +31,30 @@ const postList = props => {
 }
 
 export const postListQuery = graphql`
-  query postListQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM Do YYYY")
-            author
-            tags
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 800, layout: CONSTRAINED)
-              }
+query postListQuery($skip: Int!, $limit: Int!) {
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: $limit, skip: $skip) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "MMMM Do YYYY")
+          author
+          tags
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 800, layout: CONSTRAINED)
             }
           }
-          fields {
-            slug
-          }
-          excerpt
         }
+        fields {
+          slug
+        }
+        excerpt
       }
     }
   }
+}
 `
 
 export default postList
