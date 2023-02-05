@@ -6,7 +6,7 @@ module.exports = {
     title: `Jr Devs Blog`,
     description: `My journey as a developer`,
     twitterUsername: ``,
-    image: `src/images/code-icon.svg`,
+    image: `src/images/brandon.jpeg`,
     siteUrl: `https://www.jrdevsblog.com`,
   },
   plugins: [
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jr Devs Blof`,
+        name: `Jr Devs Blog`,
         short_name: `JrDevs`,
         start_url: `/`,
         background_color: `#f7f0eb`,

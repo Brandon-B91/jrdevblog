@@ -8,7 +8,7 @@ import {
   CardText,
 } from "reactstrap";
 import { graphql, StaticQuery, Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import Email from "./Email";
 import { slugify } from "../util/utilityFunctions";
 import authors from "../util/author";
@@ -17,7 +17,11 @@ const Sidebar = ({ author, image }) => (
   <div>
     {author && (
       <Card>
-        <GatsbyImage className="card-img-top" image={image} />
+        <StaticImage
+          src="../images/Brandon.jpeg"
+          alt="Brandons profile image"
+          className="team-img"
+        />{" "}
         <CardBody>
           <CardTitle className="text-center text-uppercase mb-3 text-md">
             {author.name}
