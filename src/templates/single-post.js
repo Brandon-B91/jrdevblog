@@ -16,7 +16,7 @@ const SinglePost = ({ data, pageContext }) => {
     <Layout
       pageTitle={post.title}
       postAuthor={author}
-      authorImageFluid={data.file.childImageSharp.gatsbyImageData}
+      image={data.file.childImageSharp.gatsbyImageData}
     >
       <Card>
         <GatsbyImage className="card-img-top" image={post.image.childImageSharp.gatsbyImageData} alt={post.alt} />
