@@ -43,7 +43,7 @@ query postListQuery($skip: Int!, $limit: Int!) {
           tags
           image {
             childImageSharp {
-              gatsbyImageData(width: 800, layout: CONSTRAINED)
+              gatsbyImageData(layout: CONSTRAINED)
             }
           }
         }

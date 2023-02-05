@@ -56,7 +56,11 @@ query indexQuery {
           tags
           image {
             childImageSharp {
-              gatsbyImageData(width: 800, layout: CONSTRAINED)
+              gatsbyImageData(
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                width: 600
+                )
             }
           }
         }

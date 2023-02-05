@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import { SEO } from "../components/Seo"
 import authors from "../util/author"
 import { Button, Card, CardText, CardBody, CardTitle, Row } from "reactstrap"
-import BrandonImage from "../images/Brandon.jpeg"
 import { slugify } from "../util/utilityFunctions"
 import RecentPosts from "../components/RecentPost"
 

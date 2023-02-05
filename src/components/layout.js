@@ -7,7 +7,7 @@ import Footer from "./Footer"
 import { Row, Col } from "reactstrap"
 import Sidebar from "./Sidebar"
 
-const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
+const Layout = ({ image, children, pageTitle, postAuthor }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,7 +32,7 @@ const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
         <Row>
           <Col md="8">{children}</Col>
           <Col md="4">
-            <Sidebar author={postAuthor} authorFluid={authorImageFluid} />
+            <Sidebar author={postAuthor} image={image} />
           </Col>
         </Row>
       </div>

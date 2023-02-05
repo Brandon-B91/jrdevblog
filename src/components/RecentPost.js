@@ -4,8 +4,6 @@ import Post from "../components/Post";
 
 const RecentPosts = () => {
   return (
-    // <Layout pageTitle="Check out our latest posts">
-    // <SEO title="junior developers blog" description="Web and frontend development blog, let's talk all things techno wizardry and mechanical witchcraft"></SEO>
     <div>
       <h2 class="text-center mb-3">Check out our latest posts!</h2>
       <StaticQuery
@@ -47,7 +45,7 @@ const RecentPost = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(width: 500, layout: CONSTRAINED)
+                gatsbyImageData(layout: CONSTRAINED)
               }
             }
           }

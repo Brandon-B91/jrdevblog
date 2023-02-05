@@ -13,15 +13,11 @@ import Email from "./Email";
 import { slugify } from "../util/utilityFunctions";
 import authors from "../util/author";
 
-const Sidebar = ({ author, authorFluid }) => (
+const Sidebar = ({ author, image }) => (
   <div>
     {author && (
       <Card>
-        <GatsbyImage
-          className="card-image-top"
-          image={authorFluid}
-          maxHeight="200"
-        />
+        <GatsbyImage className="card-img-top" image={image} />
         <CardBody>
           <CardTitle className="text-center text-uppercase mb-3 text-md">
             {author.name}
@@ -135,7 +131,7 @@ const sidebarQuery = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(width: 400, layout: CONSTRAINED)
+                gatsbyImageData(layout: CONSTRAINED)
               }
             }
           }

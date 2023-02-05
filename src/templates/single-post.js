@@ -105,14 +105,14 @@ export const postQuery = graphql`
         tags
         image {
           childImageSharp {
-            gatsbyImageData(width: 600, layout: CONSTRAINED)
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
     }
     file(relativePath: { eq: $imageUrl }) {
       childImageSharp {
-        gatsbyImageData(width: 600, layout: CONSTRAINED)
+        gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }

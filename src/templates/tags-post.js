@@ -47,7 +47,7 @@ export const tagQuery = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(width: 650, height: 371)
+                gatsbyImageData(width: 650 height: 371)
               }
             }
           }

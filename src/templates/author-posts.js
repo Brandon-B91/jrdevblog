@@ -14,7 +14,7 @@ const authorPosts = ({ data, pageContext }) => {
     <Layout
       pageTitle={pageHeader}
       postAuthor={author}
-      authorImageFluid={data.file.childImageSharp.fluid}
+      image={data.file.childImageSharp.gatsbyImageData}
     >
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post
@@ -25,7 +25,7 @@ const authorPosts = ({ data, pageContext }) => {
           date={node.frontmatter.date}
           body={node.excerpt}
           tags={node.frontmatter.tags}
-          fluid={node.frontmatter.image.childImageSharp.fluid}
+          image={node.frontmatter.image.childImageSharp.gatsbyImageData}
         />
       ))}
     </Layout>
@@ -49,7 +49,7 @@ export const authorQuery = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(width: 500)
+                gatsbyImageData(layout: CONSTRAINED)
               }
             }
           }
