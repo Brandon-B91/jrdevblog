@@ -58,7 +58,6 @@ query indexQuery {
             childImageSharp {
               gatsbyImageData(
                 layout: CONSTRAINED
-                placeholder: BLURRED
                 width: 600
                 )
             }
