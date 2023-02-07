@@ -10,7 +10,23 @@ module.exports = {
     siteUrl: `https://www.jrdevsblog.com`,
   },
   plugins: [
-    // "gatsby-plugin-google-gtag",
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["GA-TRACKING_ID", process.env.GOOGLE_4 || "none"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://gmail.us1.list-manage.com/subscribe/post?u=429c539bd60c4b16c9b79b902&amp;id=2228b02ef1",
+        timeout: 3500,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
@@ -20,6 +36,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: `Jr Devs Blog`,
+        short_name: `JrDevs`,
+        start_url: `/`,
+        background_color: "000000",
+        theme_color: `#000000`,
+        display: "standalone",
         icon: "src/images/code-icon.svg",
       },
     },
