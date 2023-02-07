@@ -43,7 +43,9 @@ query postListQuery($skip: Int!, $limit: Int!) {
           tags
           image {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED)
+              gatsbyImageData(layout: CONSTRAINED
+                placeholder: BLURRED
+                )
             }
           }
         }

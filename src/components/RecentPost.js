@@ -45,7 +45,8 @@ const RecentPost = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED)
+                gatsbyImageData(layout: CONSTRAINED
+                  placeholder: BLURRED)
               }
             }
           }
