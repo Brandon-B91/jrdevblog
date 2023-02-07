@@ -71,5 +71,5 @@ export const authorQuery = graphql`
 export default authorPosts;
 
 export const Head = () => (
-  <SEO title='' />
+  <SEO title='Blog posts by Brandon Brown' />
 )

@@ -76,5 +76,5 @@ query indexQuery {
 export default IndexPage
 
 export const Head = () => (
-  <SEO />
+  <SEO title ="Jr devs blogs" description="A place to talk about mechanical witchcraft and wizardry"/>
 )
