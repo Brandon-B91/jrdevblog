@@ -2,7 +2,7 @@
 title: "Introduction part 2"
 date: 2021-2-25 18:15:00
 author: "Brandon Brown"
-`image: ../../images/images-front/intro.jpeg
+image: ../../images/images-front/intro.jpeg
 tags:
   - personal
   - intro
