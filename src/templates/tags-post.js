@@ -22,7 +22,7 @@ const tagPosts = ({ data, pageContext }) => {
           date={node.frontmatter.date}
           body={node.excerpt}
           tags={node.frontmatter.tags}
-          fluid={node.frontmatter.image.childImageSharp.fluid}
+          image={node.frontmatter.image.childImageSharp.gatsbyImageData}
         />
       ))}
     </Layout>
@@ -47,7 +47,9 @@ export const tagQuery = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(width: 650 height: 371)
+                gatsbyImageData(width: 600
+                  layout: CONSTRAINED
+                  )
               }
             }
           }

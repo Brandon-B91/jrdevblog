@@ -60,7 +60,7 @@ const Sidebar = ({ author, image }) => (
     <Card>
       <CardBody>
         <CardTitle className="text-center text-upppercase mb-3">
-          <Email> </Email>
+          <Email></Email>
         </CardTitle>
       </CardBody>
     </Card>

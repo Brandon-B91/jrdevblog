@@ -2,7 +2,7 @@
 title: "Introduction part 3"
 date: 2021-4-3 11:55:00
 author: "Brandon Brown"
-image: '../../images/images-front/intro3.jpeg'
+image: ../../images/images-front/intro.jpeg
 tags:
   - intro
   - personal
