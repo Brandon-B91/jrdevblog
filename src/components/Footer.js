@@ -8,26 +8,6 @@ const Footer = () => (
     </p>
     <div className="footer-social-links">
       <ul className="social-links-list">
-        {/* <li>
-          <a
-            href="https://facebook.com/jr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="facebook"
-          >
-            <i className="fab fa-facebook-f fa-2x"></i>
-          </a>
-        </li> */}
-        {/* <li>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="twitter"
-          >
-            <i className="fab fa-twitter fa-2x"></i>
-          </a>
-        </li> */}
         <li>
           <a
             href="https://instagram.com/jrdevsblog"
@@ -38,16 +18,6 @@ const Footer = () => (
             <i className="fab fa-instagram fa-2x"></i>
           </a>
         </li>
-        {/* <li>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="linkedin"
-          >
-            <i className="fab fa-linkedin fa-2x"></i>
-          </a>
-        </li> */}
         <li>
           <a
             href="mailto:jrdevsblog@gmail.com"
