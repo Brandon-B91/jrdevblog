@@ -30,7 +30,7 @@ const Sidebar = ({ author, image }) => (
                   href={author.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="instagram"
+                  className="instagram text-light"
                 >
                   <i className="fab fa-instagram fa-lg"></i>
                 </a>
@@ -40,7 +40,7 @@ const Sidebar = ({ author, image }) => (
                   href={author.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="linkedin"
+                  className="linkedin text-light"
                 >
                   <i className="fab fa-linkedin fa-lg"></i>
                 </a>

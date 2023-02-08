@@ -39,7 +39,7 @@ module.exports = {
         name: `Jr Devs Blog`,
         short_name: `JrDevs`,
         start_url: `/`,
-        background_color: "000000",
+        background_color: "#000000",
         theme_color: `#000000`,
         display: "standalone",
         icon: "src/images/code-icon.svg",
