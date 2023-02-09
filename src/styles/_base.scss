@@ -46,20 +46,11 @@ footer {
   margin-bottom: 5%;
 }
 
-
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
-}
-
-hr {
-  margin-top: 10px;
-  margin-bottom: 0;
-  width: 90%;
-  height: 1px;
-  background: black;
 }
 
 .pagination > li > a {
@@ -68,13 +59,7 @@ hr {
 }
 
 .pagination > .disabled > a {
- border: 1px solid black;
+  border: 1px solid black;
   color: white;
   background: #000;
 }
-
-
-
-
-
-

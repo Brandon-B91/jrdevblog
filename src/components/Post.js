@@ -7,7 +7,6 @@ import {
   CardText,
   CardSubtitle,
   CardBody,
-  Row,
 } from "reactstrap";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { slugify } from "../util/utilityFunctions";
@@ -18,9 +17,6 @@ const Post = ({ title, author, slug, date, body, image, tags }) => {
       <Link to={`/${slug}/`}>
         <GatsbyImage className="card-img-top" image={image} alt={title} />
       </Link>
-      <Row className="d-flex justify-content-center">
-        <hr />
-      </Row>
       <CardBody>
         <CardTitle>
           <Link to={`/${slug}/`} className="text-light d-flex h3 text-wrap">
