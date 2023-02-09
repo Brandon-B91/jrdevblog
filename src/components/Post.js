@@ -6,14 +6,14 @@ import {
   CardTitle,
   CardText,
   CardSubtitle,
-  CardBody,
+  CardBody
 } from "reactstrap";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { slugify } from "../util/utilityFunctions";
 
 const Post = ({ title, author, slug, date, body, image, tags }) => {
   return (
-    <Card className="shadow">
+    <Card className="">
       <Link to={`/${slug}/`}>
         <GatsbyImage className="card-img-top" image={image} alt={title} />
       </Link>
