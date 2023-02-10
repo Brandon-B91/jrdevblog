@@ -8,7 +8,7 @@ import {
   CardText,
 } from "reactstrap";
 import { graphql, StaticQuery, Link } from "gatsby";
-import { GatsbyImage, StaticIma } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Email from "./Email";
 import { slugify } from "../util/utilityFunctions";
 import authors from "../util/author";
@@ -49,7 +49,7 @@ const Sidebar = ({ author, image }) => (
           </div>
           <Button
             classname="text-uppercase"
-            color="outline-secondary"
+            color="outline-light"
             href={`/author/${slugify(authors[0].name)}`}
           >
             View posts
@@ -94,11 +94,11 @@ const Sidebar = ({ author, image }) => (
                       </Link>
                     </CardTitle>
                     <CardSubtitle>
-                      <span className="text-danger">
-                        {node.frontmatter.date}
+                      <span className="text-light">
+                        Written: {node.frontmatter.date}
                       </span>{" "}
                       by{" "}
-                      <span className="text-danger">
+                      <span className="text-light">
                         {node.frontmatter.author}
                       </span>
                     </CardSubtitle>

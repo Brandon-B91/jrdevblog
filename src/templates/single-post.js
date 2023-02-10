@@ -26,7 +26,7 @@ const SinglePost = ({ data, pageContext }) => {
             <span className="text-light">{post.author}</span>
           </CardSubtitle>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-          <ul className="post-tags">
+          <ul className="post-tags d-flex flex-wrap">
             {" "}
             {post.tags.map((tag) => (
               <li key={tag}>
