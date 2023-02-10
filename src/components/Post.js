@@ -41,7 +41,7 @@ const Post = ({ title, author, slug, date, body, image, tags }) => {
         </ul>
         <Link
           to={`/${slug}/`}
-          className="btn btn-outline-secondary float-right"
+          className="btn btn-outline-light float-right"
         >
           Read more...
         </Link>

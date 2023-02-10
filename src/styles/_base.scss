@@ -60,7 +60,12 @@ blockquote {
 
 .pagination > .disabled > a {
   border: 1px solid black;
-  color: white;
   background: #000;
 }
+
+.pagination > .active > a {
+  background-color: #333;
+  border-color: #333;
+}
+
 

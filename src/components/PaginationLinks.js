@@ -11,12 +11,12 @@ const PaginationLinks = ({ currentPage, numberOfPages }) => {
     <Pagination aria-label="Page navigation example">
       {isFirst ? (
         <PaginationItem disabled>
-          <PaginationLink className="text-danger" previous href="/" />
+          <PaginationLink className="text-secondary" previous href="/" />
         </PaginationItem>
       ) : (
         <PaginationItem>
           <PaginationLink
-            className="text-danger"
+            className="text-secondary"
             previous
             href={previousPage}
           />
@@ -35,7 +35,7 @@ const PaginationLinks = ({ currentPage, numberOfPages }) => {
         ) : (
           <PaginationItem key={`page-number${i + 1}`}>
             <PaginationLink
-              className="text-secondary"
+              className="text-light"
               href={`/${i === 0 ? "" : "page/" + (i + 1)}`}
             >
               {i + 1}
@@ -45,11 +45,11 @@ const PaginationLinks = ({ currentPage, numberOfPages }) => {
       )}
       {isLast ? (
         <PaginationItem disabled>
-          <PaginationLink className="text-danger" next href={nextPage} />
+          <PaginationLink className="text-light" next href={nextPage} />
         </PaginationItem>
       ) : (
         <PaginationItem>
-          <PaginationLink className="text-danger" next href={nextPage} />
+          <PaginationLink className="text-secondary" next href={nextPage} />
         </PaginationItem>
       )}
     </Pagination>
