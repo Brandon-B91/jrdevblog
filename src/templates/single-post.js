@@ -22,8 +22,8 @@ const SinglePost = ({ data, pageContext }) => {
         <GatsbyImage className="card-img-top" image={post.image.childImageSharp.gatsbyImageData} alt={post.alt} />
         <CardBody>
           <CardSubtitle>
-            <span className="text-danger">{post.date}</span> by {""}
-            <span className="text-danger">{post.author}</span>
+            <span className="text-light">Written: {post.date}</span> by {""}
+            <span className="text-light">{post.author}</span>
           </CardSubtitle>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <ul className="post-tags">
