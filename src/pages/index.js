@@ -73,7 +73,7 @@ export default IndexPage;
 
 export const Head = () => (
   <SEO
-    title="Jr devs blog"
-    description="A place to talk about mechanical witchcraft and wizardry"
+    title="Jr devs blog - Welcome to my journey."
+    description="The journey of a self taught web developer and a place to talk about all things mechanic withcraft and wizardry."
   />
 );
