@@ -37,3 +37,5 @@ Coding can be a solitary activity, but joining a coding community can provide yo
 
 Learning to code can be a challenging and time-consuming process, but it’s important to stay motivated and keep pushing yourself. Set achievable goals, celebrate your progress, and don’t be afraid to seek help when you need it.
 Learning to code is a rewarding and empowering experience. Not only will it open up new career opportunities, but it will also help you develop important skills that can be applied to other areas of your life. So, if you’re ready to start your coding journey, go ahead and take that first step – you won’t regret it.
+
+*If you'd like to join the community and make your own posts on here and share your experiences Reach to me VIA social media or Email and I'd be more than happy to feature your writings!* 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import { graphql, Link } from "gatsby";
 import { SEO } from "../components/Seo";
@@ -12,12 +12,20 @@ const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter;
   const author = authors.find((x) => x.name === post.author);
   const baseUrl = "https://www.jrdevsblog.com" + pageContext.slug;
+  const [wordCount, setWordCount] = useState(0);
 
   let disqusConfig = {
     identifier: data.markdownRemark.id,
     title: post.title,
     url: baseUrl,
   };
+
+  useEffect(() => {
+    let text = data.markdownRemark.html;
+    setWordCount(text.split(" ").length);
+    console.log(wordCount);
+  });
+
   return (
     <Layout
       pageTitle={post.title}
@@ -35,6 +43,10 @@ const SinglePost = ({ data, pageContext }) => {
             <span className="text-light">Written: {post.date}</span> by {""}
             <span className="text-light">{post.author}</span>
           </CardSubtitle>
+          <CardSubtitle className="text-danger" style={{ fontSize: "14px"}}>
+          Time to read: {Math.ceil(wordCount / 238)} Mins
+          </CardSubtitle>
+
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <ul className="post-tags d-flex flex-wrap">
             {" "}
