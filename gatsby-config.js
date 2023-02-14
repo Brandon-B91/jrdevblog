@@ -62,5 +62,11 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `https-www-jrdevsblog-com`,
+      },
+    },
   ],
 };

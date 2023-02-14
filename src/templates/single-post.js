@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import { graphql, Link } from "gatsby";
 import { SEO } from "../components/Seo";
 import { Badge, Card, CardBody, CardSubtitle } from "reactstrap";
+import { Disqus, CommentCount } from "gatsby-plugin-disqus";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { slugify } from "../util/utilityFunctions";
 import authors from "../util/author";
@@ -10,8 +11,13 @@ import authors from "../util/author";
 const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter;
   const author = authors.find((x) => x.name === post.author);
-  const baseUrl = "https://www.jrdevsblog.com";
+  const baseUrl = "https://www.jrdevsblog.com" + pageContext.slug;
 
+  let disqusConfig = {
+    identifier: data.markdownRemark.id,
+    title: post.title,
+    url: baseUrl,
+  };
   return (
     <Layout
       pageTitle={post.title}
@@ -19,7 +25,11 @@ const SinglePost = ({ data, pageContext }) => {
       image={data.file.childImageSharp.gatsbyImageData}
     >
       <Card>
-        <GatsbyImage className="card-img-top" image={post.image.childImageSharp.gatsbyImageData} alt={post.alt} />
+        <GatsbyImage
+          className="card-img-top"
+          image={post.image.childImageSharp.gatsbyImageData}
+          alt={post.alt}
+        />
         <CardBody>
           <CardSubtitle>
             <span className="text-light">Written: {post.date}</span> by {""}
@@ -89,6 +99,7 @@ const SinglePost = ({ data, pageContext }) => {
           </li>
         </ul>
       </div>
+      <Disqus config={disqusConfig} />
     </Layout>
   );
 };
@@ -120,4 +131,9 @@ export const postQuery = graphql`
 
 export default SinglePost;
 
-export const Head = ({data}) => <SEO title={data.markdownRemark.frontmatter.title} description={data.markdownRemark.frontmatter.tags}/>;
+export const Head = ({ data }) => (
+  <SEO
+    title={data.markdownRemark.frontmatter.title}
+    description={data.markdownRemark.frontmatter.tags}
+  />
+);
