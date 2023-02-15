@@ -1,6 +1,6 @@
-import PropTypes from "prop-types"
-import React from "react"
-import "../styles/index.scss"
+import PropTypes from "prop-types";
+import React from "react";
+import "../styles/index.scss";
 import {
   Collapse,
   Navbar,
@@ -9,16 +9,16 @@ import {
   Nav,
   NavItem,
   NavLink,
-} from "reactstrap"
+} from "reactstrap";
 
 const Header = ({ siteTitle }) => {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const toggle = () => setIsOpen(!isOpen)
+  const [isOpen, setIsOpen] = React.useState(false);
+  const toggle = () => setIsOpen(!isOpen);
   return (
     <div>
-      <Navbar fixed="top" dark expand="xs" >
+      <Navbar fixed="top" dark expand="xs">
         <div className="container d-inline-flex">
-        <NavbarBrand href="/">{siteTitle}</NavbarBrand>
+          <NavbarBrand href="/">{siteTitle}</NavbarBrand>
           <NavbarToggler onClick={toggle} className="ms-auto" />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto" navbar>
@@ -36,15 +36,15 @@ const Header = ({ siteTitle }) => {
         </div>
       </Navbar>
     </div>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

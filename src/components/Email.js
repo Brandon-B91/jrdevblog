@@ -1,23 +1,23 @@
-import React, { useState } from "react"
-import addToMailchimp from "gatsby-plugin-mailchimp"
-import { Form, Input } from "reactstrap"
+import React, { useState } from "react";
+import addToMailchimp from "gatsby-plugin-mailchimp";
+import { Form, Input } from "reactstrap";
 
 function Email() {
-  const [email, setEmail] = useState("")
-  const [status, setStatus] = useState("")
-  const [message, setMessage] = useState("")
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = async event => {
-    event.preventDefault()
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     // Mailchimp always responds with status code 200, accompanied by a string indicating the result of the response.
-    const { result, msg } = await addToMailchimp(email)
-    result === "success" && setEmail("")
+    const { result, msg } = await addToMailchimp(email);
+    result === "success" && setEmail("");
     // Removes the HTML returned in some response messages in case of error
-    setMessage(msg.split("<")[0])
-    setStatus(result)
-  }
+    setMessage(msg.split("<")[0]);
+    setStatus(result);
+  };
 
-  const handleChange = event => setEmail(event.target.value)
+  const handleChange = (event) => setEmail(event.target.value);
 
   return (
     <Form>
@@ -53,7 +53,7 @@ function Email() {
         Subscribe
       </button>
     </Form>
-  )
+  );
 }
 
-export default Email
+export default Email;

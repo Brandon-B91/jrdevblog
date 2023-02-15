@@ -17,7 +17,11 @@ const Sidebar = ({ author, image, description }) => (
   <div>
     {author && (
       <Card>
-        <GatsbyImage className="card-img-top" image={image} alt={description || 'intro'} />
+        <GatsbyImage
+          className="card-img-top"
+          image={image}
+          alt={description || "intro"}
+        />
         <CardBody>
           <CardTitle className="text-center text-uppercase mb-3 text-md">
             {author.name}
@@ -85,10 +89,7 @@ const Sidebar = ({ author, image, description }) => (
                   </Link>
                   <CardBody>
                     <CardTitle className="">
-                      <Link
-                        className="text-light"
-                        to={`/${node.fields.slug}/`}
-                      >
+                      <Link className="text-light" to={`/${node.fields.slug}/`}>
                         {" "}
                         {node.frontmatter.title}
                       </Link>

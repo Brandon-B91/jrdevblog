@@ -1,13 +1,13 @@
-import React from 'react'
-import Layout from '../components/layout'
-import Post from '../components/Post'
-import { graphql } from 'gatsby'
-import PaginationLinks from '../components/PaginationLinks'
+import React from "react";
+import Layout from "../components/layout";
+import Post from "../components/Post";
+import { graphql } from "gatsby";
+import PaginationLinks from "../components/PaginationLinks";
 import { SEO } from "../components/Seo";
 
-const postList = props => {
-  const posts = props.data.allMarkdownRemark.edges
-  const { currentPage, numberOfPages } = props.pageContext
+const postList = (props) => {
+  const posts = props.data.allMarkdownRemark.edges;
+  const { currentPage, numberOfPages } = props.pageContext;
 
   return (
     <Layout pageTitle={`Page: ${currentPage}`}>
@@ -28,43 +28,45 @@ const postList = props => {
         numberOfPages={numberOfPages}
       />
     </Layout>
-  )
-}
+  );
+};
 
 export const postListQuery = graphql`
-query postListQuery($skip: Int!, $limit: Int!) {
-  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: $limit, skip: $skip) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "MMMM Do YYYY")
-          author
-          tags
-          image {
-            childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED
-                placeholder: BLURRED
-                )
+  query postListQuery($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      limit: $limit
+      skip: $skip
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM Do YYYY")
+            author
+            tags
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+              }
             }
           }
+          fields {
+            slug
+          }
+          excerpt
         }
-        fields {
-          slug
-        }
-        excerpt
       }
     }
   }
-}
-`
+`;
 
-export default postList
+export default postList;
 
 export const Head = ({ data }) => (
   <SEO
-    title={'Keyword tags list'}
-    description={'List of all keywords used on website for search by tag'}
+    title={"Keyword tags list"}
+    description={"List of all keywords used on website for search by tag"}
   />
 );

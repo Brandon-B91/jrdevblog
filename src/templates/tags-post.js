@@ -1,15 +1,14 @@
-
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Post from '../components/Post'
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import Post from "../components/Post";
 
 const tagPosts = ({ data, pageContext }) => {
-  const { tag } = pageContext
-  const { totalCount } = data.allMarkdownRemark
+  const { tag } = pageContext;
+  const { totalCount } = data.allMarkdownRemark;
   const pageHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
+    totalCount === 1 ? "" : "s"
+  } tagged with "${tag}"`;
 
   return (
     <Layout pageTitle={pageHeader}>
@@ -26,15 +25,14 @@ const tagPosts = ({ data, pageContext }) => {
         />
       ))}
     </Layout>
-  )
-}
-
+  );
+};
 
 export const tagQuery = graphql`
-  query($tag: String!) {
+  query ($tag: String!) {
     allMarkdownRemark(
-      sort: {frontmatter: {date: DESC}}
-      filter: {frontmatter: {tags: {in: [$tag]}}}
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {
@@ -47,9 +45,7 @@ export const tagQuery = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(width: 600
-                  layout: CONSTRAINED
-                  )
+                gatsbyImageData(width: 600, layout: CONSTRAINED)
               }
             }
           }
@@ -61,6 +57,6 @@ export const tagQuery = graphql`
       }
     }
   }
-`
+`;
 
-    export default tagPosts
+export default tagPosts;

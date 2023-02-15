@@ -43,8 +43,8 @@ const SinglePost = ({ data, pageContext }) => {
             <span className="text-light">Written: {post.date}</span> by {""}
             <span className="text-light">{post.author}</span>
           </CardSubtitle>
-          <CardSubtitle className="text-danger" style={{ fontSize: "14px"}}>
-          Time to read: {Math.ceil(wordCount / 238)} Mins
+          <CardSubtitle className="text-danger" style={{ fontSize: "14px" }}>
+            Time to read: {Math.ceil(wordCount / 238)} Mins
           </CardSubtitle>
 
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />

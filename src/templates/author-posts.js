@@ -33,10 +33,10 @@ const authorPosts = ({ data, pageContext }) => {
 };
 
 export const authorQuery = graphql`
-  query($authorName: String!, $imageUrl: String!) {
+  query ($authorName: String!, $imageUrl: String!) {
     allMarkdownRemark(
-      sort: {frontmatter: {date: DESC}}
-      filter: {frontmatter: {author: {eq: $authorName}}}
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { author: { eq: $authorName } } }
     ) {
       totalCount
       edges {
@@ -60,7 +60,7 @@ export const authorQuery = graphql`
         }
       }
     }
-    file(relativePath: {eq: $imageUrl}) {
+    file(relativePath: { eq: $imageUrl }) {
       childImageSharp {
         gatsbyImageData(width: 500)
       }
@@ -71,10 +71,9 @@ export const authorQuery = graphql`
 export default authorPosts;
 
 export const Head = () => (
-  <SEO 
-  title='Blog posts by Brandon Brown' 
-  description={"All blog posts made by Brandon brown"}
-  meta='react, gatsby, seo, html, css, javascript, web developer'
+  <SEO
+    title="Blog posts by Brandon Brown"
+    description={"All blog posts made by Brandon brown"}
+    meta="react, gatsby, seo, html, css, javascript, web developer"
   />
-
-)
+);

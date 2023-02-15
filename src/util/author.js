@@ -2,8 +2,7 @@ const authors = [
   {
     name: "Brandon Brown",
     imageUrl: "Brandon.jpeg",
-    bio:
-      "I am a web developer documenting my experiences with learning front end web development.",
+    bio: "I am a web developer documenting my experiences with learning front end web development.",
     facebook: "https://facebook.com/brandonb91",
     instagram: "https://instagram.com/official.whitedevil",
     linkedin: "https://linkedin.com/in/brandon-brown91",

@@ -6,7 +6,7 @@ import {
   CardTitle,
   CardText,
   CardSubtitle,
-  CardBody
+  CardBody,
 } from "reactstrap";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { slugify } from "../util/utilityFunctions";
@@ -39,10 +39,7 @@ const Post = ({ title, author, slug, date, body, image, tags }) => {
             </li>
           ))}
         </ul>
-        <Link
-          to={`/${slug}/`}
-          className="btn btn-outline-light float-right"
-        >
+        <Link to={`/${slug}/`} className="btn btn-outline-light float-right">
           Read more...
         </Link>
       </CardBody>
