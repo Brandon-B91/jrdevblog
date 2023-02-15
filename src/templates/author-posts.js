@@ -70,11 +70,11 @@ export const authorQuery = graphql`
 
 export default authorPosts;
 
-export const Head = ({ data }) => (
+export const Head = () => (
   <SEO 
   title='Blog posts by Brandon Brown' 
   description={"All blog posts made by Brandon brown"}
-  meta={data.allMarkdownRemark.edges.node.frontmatter.tags}
+  meta='react, gatsby, seo, html, css, javascript, web developer'
   />
 
 )
