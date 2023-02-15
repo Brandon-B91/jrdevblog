@@ -66,6 +66,5 @@ export const Head = ({ data }) => (
   <SEO
     title={'Keyword tags list'}
     description={'List of all keywords used on website for search by tag'}
-    meta={data.markdown.frontmatter.tags}
   />
 );
