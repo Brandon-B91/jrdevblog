@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Post from '../components/Post'
 import { graphql } from 'gatsby'
 import PaginationLinks from '../components/PaginationLinks'
+import { SEO } from "../components/Seo";
 
 const postList = props => {
   const posts = props.data.allMarkdownRemark.edges
@@ -60,3 +61,11 @@ query postListQuery($skip: Int!, $limit: Int!) {
 `
 
 export default postList
+
+export const Head = ({ data }) => (
+  <SEO
+    title={'Keyword tags list'}
+    description={'List of all keywords used on website for search by tag'}
+    meta={data.markdown.frontmatter.tags}
+  />
+);

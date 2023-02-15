@@ -147,5 +147,6 @@ export const Head = ({ data }) => (
   <SEO
     title={data.markdownRemark.frontmatter.title}
     description={data.markdownRemark.frontmatter.tags}
+    meta={data.markdown.frontmatter.tags}
   />
 );

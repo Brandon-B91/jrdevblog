@@ -14,6 +14,7 @@ export const SEO = ({ title, description, pathname, children }) => {
 
   return (
     <>
+      <html lang="en" />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
