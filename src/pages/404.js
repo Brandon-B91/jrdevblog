@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
+import { SEO } from '../components/Seo'
 
 const NotFoundPage = () => (
   <Layout pageTitle="Oops, Somethig went wrong..">
@@ -14,3 +15,10 @@ const NotFoundPage = () => (
 )
 
 export default NotFoundPage
+
+export const Head = () => (
+  <SEO
+    title="Jr devs blog - 404 page"
+    description="Looks like something went wrong click here to go back."
+  />
+);

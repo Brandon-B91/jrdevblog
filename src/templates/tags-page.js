@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import { Badge, Button } from 'reactstrap'
 import { slugify } from '../util/utilityFunctions'
 import RecentPosts from "../components/RecentPost"
+import { SEO } from '../components/Seo'
 
 
 const tagsPage = ({ pageContext }) => {
@@ -25,3 +26,10 @@ const tagsPage = ({ pageContext }) => {
 }
 
 export default tagsPage
+
+export const Head = () => (
+  <SEO
+    title="Jr devs blog - Tags page a list of all current tags being used on all blog posts"
+    description="The journey of a self taught web developer and a place to talk about all things mechanic withcraft and wizardry."
+  />
+);
