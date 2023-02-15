@@ -13,11 +13,11 @@ import Email from "./Email";
 import { slugify } from "../util/utilityFunctions";
 import authors from "../util/author";
 
-const Sidebar = ({ author, image }) => (
+const Sidebar = ({ author, image, description }) => (
   <div>
     {author && (
       <Card>
-        <GatsbyImage className="card-img-top" image={image} />
+        <GatsbyImage className="card-img-top" image={image} alt={description || 'intro'} />
         <CardBody>
           <CardTitle className="text-center text-uppercase mb-3 text-md">
             {author.name}

@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Jr Devs Blog`,
     description: `My journey as a developer`,
-    twitterUsername: ``,
+    twitterUsername: `jrdevsblog`,
     image: `src/images/brandon.jpeg`,
     siteUrl: `https://www.jrdevsblog.com`,
   },
@@ -74,6 +74,12 @@ module.exports = {
         host: 'https://www.jrdevsblog.com',
         sitemap: 'https://www.jrdevsblog.com/sitemap.xml',
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.jrdevsblog.com`,
+      },
+    },
   ],
 };
