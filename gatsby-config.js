@@ -68,5 +68,12 @@ module.exports = {
         shortname: `https-www-jrdevsblog-com`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.jrdevsblog.com',
+        sitemap: 'https://www.jrdevsblog.com/sitemap.xml',
+      }
+    }
   ],
 };
