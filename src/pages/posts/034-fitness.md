@@ -10,7 +10,7 @@ tags:
   - physical
 ---
 
-# How fitness can help you become a better developer!
+# How exercise can help you become a better developer!
 
 I made a post on my Instagram the other day about a few reasons why as a developer you need to be active and it got me thinking about how i really watned to expound on the topic so lets talk about the different types of exercises and how they can positively affect you as a developer and overall.
 
