@@ -2,7 +2,7 @@
 title: "HTML hyper text markup language"
 date: 2023-02-17 11:53:00
 author: "Brandon Brown"
-image: ../../images/images-front/html.png
+image: ../../images/images-front/html5.png
 tags:
   - HTML
   - web
