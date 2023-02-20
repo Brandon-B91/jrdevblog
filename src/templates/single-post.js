@@ -23,7 +23,7 @@ const SinglePost = ({ data, pageContext }) => {
   useEffect(() => {
     let text = data.markdownRemark.html;
     setWordCount(text.split(" ").length);
-    // console.log(wordCount);
+    console.log(wordCount);
   });
 
   return (
