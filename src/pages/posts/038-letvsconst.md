@@ -2,7 +2,7 @@
 title: "Let vs Const"
 date: 2023-03-02 11:01:00
 author: "Brandon Brown"
-image: '../../images/images-front/let.jpg'
+image: '../../images/images-front/reactjs.png'
 tags:
    - javascript
    - api
